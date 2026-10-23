@@ -1,0 +1,29 @@
+/* Mobile-first: upar brand, beech mein content, neeche tab bar */
+.shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "brand"
+    "content"
+    "nav";
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.brand {
+  grid-area: brand;
+}
+
+.content {
+  grid-area: content;
+  min-width: 0;
+  padding: var(--space-5);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 720px;
+}

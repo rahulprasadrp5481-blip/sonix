@@ -1,8 +1,16 @@
+import Brand from './components/Brand';
+import './App.css';
+
 export default function App() {
   return (
-    <main>
-      <h1>Sonix</h1>
-      <p className="note">yahin se Sonix shuru hota hai</p>
-    </main>
+    <div className="shell">
+      <Brand />
+      <main className="content">
+        <section className="page">
+          <h1>Good evening, Rahul</h1>
+          <p className="note">yahin se Sonix shuru hota hai</p>
+        </section>
+      </main>
+    </div>
   );
 }
