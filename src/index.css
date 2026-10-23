@@ -35,3 +35,15 @@ h1 {
   outline: 2px solid var(--marigold);
   outline-offset: 3px;
 }
+/* Dikhta nahi, par screen reader padhta hai */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
