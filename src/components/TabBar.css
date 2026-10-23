@@ -35,3 +35,35 @@
 .tabbar a.active {
   color: var(--marigold);
 }
+@media (min-width: 768px) {
+  .tabbar {
+    position: static;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--space-1);
+    padding: var(--space-2) var(--space-3);
+    border-top: 0;
+    border-right: 1px solid var(--hairline);
+  }
+
+  .tabbar a {
+    flex: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--space-4);
+    min-height: 48px;
+    padding: 0 var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: 0.9375rem;
+  }
+
+  .tabbar a:hover {
+    background: var(--surface);
+    color: var(--text);
+  }
+
+  .tabbar a.active,
+  .tabbar a.active:hover {
+    color: var(--marigold);
+  }
+}
