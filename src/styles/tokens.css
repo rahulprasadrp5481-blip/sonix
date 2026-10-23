@@ -1,0 +1,33 @@
+:root {
+  /* colours */
+  --bg: #1A1510;
+  --surface: #241E17;
+  --surface-2: #2F271E;
+  --nav: #1F1A14;
+  --text: #F3EBDD;
+  --muted: #B8AC95;
+  --marigold: #F2B33D;
+  --tomato: #E4572E;
+  --teal: #2E7D7A;
+  --note: #E8DCC0;
+  --hairline: rgba(243, 235, 221, 0.08);
+  --outline: rgba(243, 235, 221, 0.18);
+
+  /* fonts */
+  --font-head: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-hand: 'Kalam', cursive;
+
+  /* shapes and spacing */
+  --radius-sm: 5px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  color-scheme: dark;
+}
