@@ -1,4 +1,10 @@
+import { Routes, Route, Navigate } from 'react-router';
 import Brand from './components/Brand';
+import TabBar from './components/TabBar';
+import Home from './pages/Home';
+import Search from './pages/Search';
+import Library from './pages/Library';
+import You from './pages/You';
 import './App.css';
 
 export default function App() {
@@ -6,11 +12,15 @@ export default function App() {
     <div className="shell">
       <Brand />
       <main className="content">
-        <section className="page">
-          <h1>Good evening, Rahul</h1>
-          <p className="note">yahin se Sonix shuru hota hai</p>
-        </section>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="search" element={<Search />} />
+          <Route path="library" element={<Library />} />
+          <Route path="you" element={<You />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
+      <TabBar />
     </div>
   );
 }

@@ -14,6 +14,9 @@
 .brand {
   grid-area: brand;
 }
+.tabbar {
+  grid-area: nav;
+}
 
 .content {
   grid-area: content;
