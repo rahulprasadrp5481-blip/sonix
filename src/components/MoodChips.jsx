@@ -1,8 +1,8 @@
-import './MoodChips.jsx';
+import './MoodChips.css';
 
 export default function MoodChips({ moods, selected, onSelect }) {
   return (
-    <div className="chips" role="group" aria-label="Pick a mood">
+    <div className="chips bleed" role="group" aria-label="Pick a mood">
       {moods.map((mood) => (
         <button
           key={mood}

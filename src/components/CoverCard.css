@@ -1,0 +1,39 @@
+.cover-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 140px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-body);
+  text-align: left;
+  cursor: pointer;
+}
+
+.cover-card-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.cover-card-title,
+.cover-card-subtitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cover-card-title {
+  margin-top: var(--space-1);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.cover-card-subtitle {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}

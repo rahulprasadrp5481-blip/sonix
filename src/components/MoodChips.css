@@ -1,10 +1,6 @@
 .chips {
   display: flex;
   gap: var(--space-2);
-  margin-top: var(--space-3);
-  /* Mobile par row screen ke kinare tak scroll ho */
-  margin-inline: calc(var(--space-5) * -1);
-  padding: 0 var(--space-5) var(--space-1);
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -32,11 +28,4 @@
   background: var(--marigold);
   border-color: var(--marigold);
   color: var(--bg);
-}
-
-@media (min-width: 768px) {
-  .chips {
-    margin-inline: 0;
-    padding-inline: 0;
-  }
 }

@@ -1,19 +1,31 @@
-import { useState } from 'react';
-import Page from '../components/Page';
-import MoodChips from '../components/MoodChips';
-import { greetingFor } from '../utils/greeting';
-import covers from '../data/covers';
-import songs from '../data/songs';
+import { useState } from 'react'
+import Page from '../components/Page'
+import MoodChips from '../components/MoodChips'
+import Row from '../components/Row'
+import CoverCard from '../components/CoverCard'
+import songs from '../data/songs'
+import { greetingFor } from '../utils/greeting'
 
-const MOODS = ['Anything', 'Rainy day', 'Late night', 'Focus', 'Old songs'];
+const MOODS = ['Anything', 'Rainy day', 'Late night', 'Focus', 'Old songs']
 
 export default function Home() {
-  const [mood, setMood] = useState('Anything');
+  const [mood, setMood] = useState('Anything')
 
   return (
-    <Page title={`${greetingFor()}, Rahul`} note="yahin se Sonix shuru hota hai">
-      <img src={covers.chai} alt="" width="140" height="140" />
+    <Page title={`${greetingFor()}, Rahul`} note="what's the mood today?">
       <MoodChips moods={MOODS} selected={mood} onSelect={setMood} />
+
+      <Row title="On repeat">
+        {songs.map((song) => (
+          <li key={song.id}>
+            <CoverCard
+              cover={song.cover}
+              title={song.title}
+              subtitle={song.artist}
+            />
+          </li>
+        ))}
+      </Row>
     </Page>
-  );
+  )
 }

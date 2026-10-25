@@ -47,3 +47,20 @@ h1 {
   white-space: nowrap;
   border: 0;
 }
+.bleed {
+  margin-inline: calc(var(--space-5) * -1);
+  padding-inline: var(--space-5);
+  scroll-padding-inline: var(--space-5);
+
+  /* focus ring ke liye jagah: overflow wala box andar ki cheez ko kaat deta hai */
+  margin-block: calc(var(--space-2) * -1);
+  padding-block: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .bleed {
+    margin-inline: 0;
+    padding-inline: 0;
+    scroll-padding-inline: 0;
+  }
+}
