@@ -35,6 +35,7 @@ const songs = [
         artist: 'The Monsoon Club',
         cover: covers.classics,
         moods: ['Old songs'],
+        isNew: true,
     },
     {
         id: 'deep-work',
@@ -56,6 +57,7 @@ const songs = [
         artist: 'Lal Batti',
         cover: covers.chai,
         moods: ['Old songs'],
+        isNew: true,
     },
     {
         id: 'last-bus',
@@ -63,6 +65,7 @@ const songs = [
         artist: 'Nightbus',
         cover: covers.nightdrive,
         moods: ['Late night'],
+        isNew: true,
     },
     {
         id: 'monsoon-letters',
@@ -70,6 +73,7 @@ const songs = [
         artist: 'Kabir Kaul',
         cover: covers.letters,
         moods: ['Rainy day'],
+        isNew: true,
     }
 ];
 

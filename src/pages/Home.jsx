@@ -2,8 +2,10 @@ import { useState } from 'react'
 import Page from '../components/Page'
 import MoodChips from '../components/MoodChips'
 import Row from '../components/Row'
-import CoverCard from '../components/CoverCard'
+import SongRow from '../components/SongRow'
+import MixtapeCard from '../components/MixtapeCard'
 import songs from '../data/songs'
+import mixtapes from '../data/mixtapes'
 import { greetingFor } from '../utils/greeting'
 
 const MOODS = ['Anything', 'Rainy day', 'Late night', 'Focus', 'Old songs']
@@ -16,6 +18,8 @@ export default function Home() {
       ? songs
       : songs.filter((song) => song.moods.includes(mood))
 
+  const newSongs = visibleSongs.filter((song) => song.isNew)
+
   return (
     <Page title={`${greetingFor()}, Rahul`} note="what's the mood today?">
       <MoodChips moods={MOODS} selected={mood} onSelect={setMood} />
@@ -23,17 +27,19 @@ export default function Home() {
       {visibleSongs.length === 0 ? (
         <p className="note">is mood ke liye abhi koi gaana nahi hai</p>
       ) : (
-        <Row key={mood} title="On repeat">
-          {visibleSongs.map((song) => (
-            <li key={song.id}>
-              <CoverCard
-                cover={song.cover}
-                title={song.title}
-                subtitle={song.artist}
-              />
-            </li>
-          ))}
-        </Row>
+        <SongRow key={mood} title="On repeat" songs={visibleSongs} />
+      )}
+
+      <Row title="Mixtapes from friends">
+        {mixtapes.map((mixtape) => (
+          <li key={mixtape.id}>
+            <MixtapeCard mixtape={mixtape} />
+          </li>
+        ))}
+      </Row>
+
+      {newSongs.length > 0 && (
+        <SongRow key={`new-${mood}`} title="New this week" songs={newSongs} />
       )}
     </Page>
   )
