@@ -11,21 +11,30 @@ const MOODS = ['Anything', 'Rainy day', 'Late night', 'Focus', 'Old songs']
 export default function Home() {
   const [mood, setMood] = useState('Anything')
 
+  const visibleSongs =
+    mood === 'Anything'
+      ? songs
+      : songs.filter((song) => song.moods.includes(mood))
+
   return (
     <Page title={`${greetingFor()}, Rahul`} note="what's the mood today?">
       <MoodChips moods={MOODS} selected={mood} onSelect={setMood} />
 
-      <Row title="On repeat">
-        {songs.map((song) => (
-          <li key={song.id}>
-            <CoverCard
-              cover={song.cover}
-              title={song.title}
-              subtitle={song.artist}
-            />
-          </li>
-        ))}
-      </Row>
+      {visibleSongs.length === 0 ? (
+        <p className="note">is mood ke liye abhi koi gaana nahi hai</p>
+      ) : (
+        <Row key={mood} title="On repeat">
+          {visibleSongs.map((song) => (
+            <li key={song.id}>
+              <CoverCard
+                cover={song.cover}
+                title={song.title}
+                subtitle={song.artist}
+              />
+            </li>
+          ))}
+        </Row>
+      )}
     </Page>
   )
 }
