@@ -6,6 +6,7 @@ import Search from './pages/Search';
 import Library from './pages/Library';
 import You from './pages/You';
 import './App.css';
+import Mixtape from './pages/Mixtape'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="search" element={<Search />} />
           <Route path="library" element={<Library />} />
           <Route path="you" element={<You />} />
+          <Route path="mixtape/:id" element={<Mixtape />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

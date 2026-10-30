@@ -6,7 +6,7 @@ const mixtapes = [
     title: 'bus ride home',
     from: 'Ananya',
     note: 'wait for the flute at 2:10',
-    songCount: 12,
+    songIds: ['last-bus','rail-ki-khidki','old-delhi-lights','paper-moons'],
     cover: covers.tape1,
   },
   {
@@ -14,7 +14,7 @@ const mixtapes = [
     title: 'rainy day',
     from: 'Awantika',
     note: 'wait for the flute at 5:10',
-    songCount: 15,
+    songIds: ['baarish-ke-baad','monsoon-letters','chai-on-the-terrace'],
     cover: covers.tape2,
   },
 ];

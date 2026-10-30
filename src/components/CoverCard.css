@@ -10,6 +10,7 @@
   font-family: var(--font-body);
   text-align: left;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .cover-card-img {
@@ -20,7 +21,6 @@
   border-radius: var(--radius-sm);
 }
 
-.cover-card-title,
 .cover-card-subtitle {
   overflow: hidden;
   white-space: nowrap;
