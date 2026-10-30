@@ -10,7 +10,7 @@ export default function MixtapeCard({ mixtape }) {
        cover={cover}
         title={title}
          subtitle={`from ${from}`}
-         to={`/mixtape-note/${id}`}
+         to={`/mixtape/${id}`}
           />
       <p className="mixtape-note">“{note}”</p>
     </div>

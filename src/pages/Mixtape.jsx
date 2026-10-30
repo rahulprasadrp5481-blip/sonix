@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router'
 import Page from '../components/Page'
 import mixtapes from '../data/mixtapes'
-import song from '../data/songs'
+import songs from '../data/songs'
 import './Mixtape.css'
 
 export default function Mixtape() {
